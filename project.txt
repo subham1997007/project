@@ -1,0 +1,5 @@
+user******************
+create table user_details(firstname varchar(50) not null,
+lastname varchar(50) not null,age number(2) not null,gender varchar2(10) check (gender='Male' or gender='female'),
+contectnumber number(10),userid varchar2(15)primary key,password varchar(15) not null,
+email varchar(50)not null,usertype varchar2(1) not null);

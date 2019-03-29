@@ -1,0 +1,37 @@
+package com.cogni.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.cogni.model.Newregistration;
+import com.health.service.Registrationservice;
+import com.health.serviceimpl.Registrationserviceimpl;
+
+public class Registrationtest {
+	
+	com.cogni.model.Newregistration reg=null;
+	Registrationservice rservice;
+	
+	@Before
+	public void setUp() throws Exception{
+		reg=new com.cogni.model.Newregistration("lucky","admin",23,"Male",23423,"12qwe","12343","s@v.com","1");
+		rservice=new Registrationserviceimpl();
+	}
+	
+	@After
+	public void TearDown() throws Exception{
+		
+	}
+	
+	
+
+	@Test
+	public void test() {
+	
+	assertTrue(rservice.insertuser(reg));
+	}
+
+}

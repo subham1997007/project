@@ -1,0 +1,12 @@
+package com.project.register;
+
+import java.sql.SQLException;
+
+import com.cogni.model.Newregistration;
+
+public interface RegistrationDao {
+	public boolean insert(Newregistration register);
+ public boolean update(Newregistration reg); 
+
+public Newregistration getuserid(String m_userid);
+}

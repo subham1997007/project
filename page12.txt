@@ -1,0 +1,56 @@
+package com.project.register;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class Registration extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+    public Registration() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter out=response.getWriter();
+		
+		String u_fname=request.getParameter("user_fname");
+		String u_lname=request.getParameter("user_lname");
+		String age=request.getParameter("user_age");
+		String gender=request.getParameter("gerder");
+		String Cnumber=request.getParameter("user_number");
+		String userid=request.getParameter("user_id");
+		String pass=request.getParameter("pass");
+		String email=request.getParameter("user_email");
+		String utype=request.getParameter("utype");
+		
+		out.println(u_fname);
+		out.println(u_lname);
+		out.println(age);
+		out.println(gender);
+		out.println(Cnumber);
+		out.println(userid);
+		out.println(pass);
+		out.println(email);
+		out.println(utype);
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+import static org.junit.Assert.*;
+
+import java.sql.SQLException;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.cogni.daoimpl.RegisterationDaoimpl;
+import com.cogni.model.Newregistration;
+import com.project.register.RegistrationDao;
+
+public class Updateusertest {
+
+	RegistrationDao ref;
+	
+	@Before
+	public void setUp() throws Exception {
+		ref = new RegisterationDaoimpl();
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		
+	}
+
+	@Test
+	public void test() throws SQLException {
+		Newregistration ob=ref.getuserid("subham");
+	}
+
+}
